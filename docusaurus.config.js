@@ -15,17 +15,21 @@ module.exports = {
         alt: 'Ecstatic Javascript library',
         src: 'img/logo.svg',
       },
+      // These are the Top Nav Items
       items: [
         {
-          to: 'getting-started/'
-        },
-        {
-          to: 'docs/',
-          activeBasePath: 'docs',
+          to: 'docs/getting_started/what-is-ecs',
+          activeBasePath: 'getting_started',
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        // {
+        //   to: 'docs/',
+        //   activeBasePath: 'docs',
+        //   label: 'Docs',
+        //   position: 'left',
+        // },
+        // {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/brochington/ecstatic',
           label: 'GitHub',
@@ -80,7 +84,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Ecstatic. Built with Docusaurus.`,
     },
   },
   presets: [
