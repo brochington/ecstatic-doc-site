@@ -105,3 +105,16 @@ function render() {
 
 render();
 ```
+
+## Querying Entities
+
+There are many methods available on the `World` instance to query entites by what types of Components are attached to them. There is no need to define a "Query" ahead of time. For a complete list, check out the [World Instance Methods](https://brochington.github.io/ecstatic/classes/_src_world_.world.html) in the API Documentation. Some highlights include:
+
+```typescript
+// `world.locate()` "locates" a single entity based on its Components.
+const entity1 = world.locate([Component1, Component2]);
+
+// `world.grabAll "Grabs" all entities that have a component of the given type attached,
+// as well as the actual component instance.
+world.grabAll(Component1).forEach(({ entity, component }) => /* do greate things */)
+```
