@@ -22,4 +22,15 @@ const taggedEntities = world.getAllTagged('AwesomeTag');
 
 ```
 
-If you are going to use tags to help in locating 
+If you are going to use tags to help in locating entities across an app, it's recommended that you use constant or enum values as the keys so that if they change, they can be updated in a central location
+
+```typescript
+// tags.js
+export const MY_TAG = "awesome-tag";
+
+
+// elsewhere.js
+import { MY_TAG } from "tags";
+
+const entityWithTag = world.createEntity().addTag(MY_TAG);
+```
