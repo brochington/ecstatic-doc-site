@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{88:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome","permalink":"/ecstatic-doc-site/blog/welcome"},{"title":"Hello","permalink":"/ecstatic-doc-site/blog/hello-world"},{"title":"Hola","permalink":"/ecstatic-doc-site/blog/hola"}]}')}}]);
