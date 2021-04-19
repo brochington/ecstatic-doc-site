@@ -88,7 +88,7 @@ myEntity.add(new MyComponent());
 
 :::info
 
-Note: Since this is Javascript, and "Everything is an Object, even Functions", there is experimental support for using Functions as Components. The use case for exactly why this is helpful is stil be determined, but if you would like to experiment with this, then tread carefully, and let us know your results and suggestions.
+Note: Since this is Javascript, and "Everything is an Object, even Functions", there is experimental support for using Functions as Components. The use case for exactly why this is helpful is still to be determined. If you would like to experiment with this, then tread carefully, and let us know your results and suggestions.
 
 :::
 

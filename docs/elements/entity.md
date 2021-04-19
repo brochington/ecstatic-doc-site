@@ -49,6 +49,20 @@ class SquareEntity extends Entity {
 
 ```
 
+## Destroying an Entity
+
+When an `Entity` has outlived its usefulness, it needs to be destroyed. There are currently two ways to destroy an `Entity`:
+
+#### `entity.destroy()`
+
+`entity.destroy()` will destroy the entity in a *deferred* manor. The state of the entity will be changed to `destroying` and actual removal of the entity will happen at the end of the next pass of systems. This allows all systems a chance to run any cleanup logic that is needed. 
+
+
+#### `entity.destroyImmediately()`
+
+`entity.destroyImmediately()` will destroy the entity immediately. The state of the entity will be set to `destroyed`, and systems will not run over the entity when they run next.
+
+
 ## Adding and Removing Components
 
 `Components` may be added and removed via the `add` and `remove` methods.

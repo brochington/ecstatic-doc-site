@@ -7,6 +7,12 @@ slug: tracked-component
 
 Sometimes it can be really helpful to react to changes in a `Component`. Ecstatic helps with this by offering a `TrackedComponent`. a `TrackedComponent` is a decorated `Component`, allowing observability without changing the original `Component`.
 
+:::caution
+
+`TrackedComponent` uses JS Proxies under the hood, and as such incurs a very small performance hit. This generally is not a problem at all, but it might not be wise to always use them by default.
+
+:::
+
 
 ## Creating a TrackedComponent
 
