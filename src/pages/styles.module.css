@@ -6,10 +6,12 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 8rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  color: white;
+  background: linear-gradient(140deg, rgb(76, 200, 200), rgb(32, 32, 51))
 }
 
 @media screen and (max-width: 966px) {
@@ -34,4 +36,62 @@
 .featureImage {
   height: 200px;
   width: 200px;
+}
+
+.para {
+  margin: 24px;
+  padding: 24px;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+.featureRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 48px auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.featureRow.reverse {
+  flex-direction: row-reverse;
+}
+
+.featureRow h2 {
+  font-size: 48px;
+}
+
+.featureRowDescription {
+  width: 40%;
+  padding-bottom: 36px;
+}
+
+.featureRowDescription div{
+  font-size: 20px;
+}
+
+.featureRowImg {
+  width: 55%;
+}
+
+.featureRowImg img{
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 966px) {
+  .featureRow, .featureRow.reverse {
+    flex-direction: column;
+  }
+
+  .featureRowDescription {
+    width: auto;
+  }
+
+  .featureRowImg {
+    width: auto;
+  }
 }
