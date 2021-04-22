@@ -150,7 +150,7 @@ const featureRows = [
     heading: 'Type Safe',
     content: `Ecstatic is fully written in Typescript, and care has been made to
     provide an amazing type experience throughout. `,
-    imgUrl: 'img/Typescript.js.png',
+    imgUrl: 'img/Typescript.ts.png',
   },
 ];
 
