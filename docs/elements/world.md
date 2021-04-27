@@ -29,3 +29,31 @@ Query methods can generally be grouped in a couple buckets:
 2. `find(), findAll()` - Use a predicate to "find" entities.
 3. `locate(), locateAll()` - "locate" an entity or entities by what `Components` are attached to it. 
 4. `grab(), grabAll(), grabBy()` - Similar to `locate` methods, but also "grabs" a component instance as well. Very handy if you know that you'll need to update a specific component on an entity.
+
+## Destroying /Shutting down a World
+
+If you are going to get rid of a world instance, it can be a good idea to properly destroy all entities by calling their `destroy()` methods, and running the systems one last time. This gives any Systems that monitor the entity "destroying" state a chance to clean up after themselves.
+
+```typescript
+let running = true;
+let rafId = null;
+
+function renderTick() {
+  if (running) {
+    world.systems.run();
+  
+    rafId.current = window.requestAnimationFrame(renderTick);
+
+    return;
+  }
+
+  // Need to offer the chance for any systems to cleanup
+  // entities that are in a "destroying" state.
+  world.entities.forEach((entity) => entity.destroy());
+  world.systems.run();
+
+  window.cancelAnimationFrame(rafId);
+}
+
+renderTick();
+```
